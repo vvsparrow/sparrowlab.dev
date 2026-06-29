@@ -1,0 +1,10 @@
+site_name: Sparrow Lab
+theme:
+  name: material
+  palette:
+    scheme: slate # Темная тема
+    primary: deep orange
+
+nav:
+  - Home: index.md
+  - YouTube Audio Guide: yt-dlp-audio.md
