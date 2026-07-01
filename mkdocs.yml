@@ -1,5 +1,7 @@
 site_name: Sparrow Lab
 site_url: https://sparrowlab.dev
+site_description: Technical blog about Python, Linux and Automation
+site_author: Valery Vorobyev
 
 theme:
   name: material
