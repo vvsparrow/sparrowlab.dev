@@ -1,5 +1,6 @@
 --- 
 date: 2026-06-30
+tags: [linux, automation, youtube]
 --- 
 # How to download YouTube audio for learning
 
