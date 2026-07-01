@@ -1,3 +1,6 @@
+--- 
+date: 2026-06-30
+--- 
 # How to download YouTube audio for learning
 
 In 2026, many standard tools for downloading from YouTube are failing due to frequent API changes. To keep my learning process smooth and get audio for my offline practice, I use `yt-dlp`. This is a professional-grade command-line tool.
