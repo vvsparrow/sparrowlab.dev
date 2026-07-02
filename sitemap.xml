@@ -2,14 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://sparrowlab.dev/</loc>
-         <lastmod>2026-06-30</lastmod>
+         <lastmod>2026-07-02</lastmod>
     </url>
     <url>
          <loc>https://sparrowlab.dev/blog/</loc>
-         <lastmod>2026-06-30</lastmod>
+         <lastmod>2026-07-02</lastmod>
     </url>
     <url>
-         <loc>https://sparrowlab.dev/posts/yt-dlp-audio/</loc>
-         <lastmod>2026-06-30</lastmod>
+         <loc>https://sparrowlab.dev/blog/2026/06/30/how-to-download-youtube-audio-for-learning/</loc>
+         <lastmod>2026-07-02</lastmod>
+    </url>
+    <url>
+         <loc>https://sparrowlab.dev/blog/archive/2026/</loc>
+         <lastmod>2026-07-02</lastmod>
     </url>
 </urlset>
