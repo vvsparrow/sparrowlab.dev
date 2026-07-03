@@ -18,7 +18,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="archive/2026/">
+        <link rel="next" href="category/automation/">
       
       
         
@@ -358,11 +358,18 @@
         <li class="md-meta__item">
           <time datetime="2026-06-30 00:00:00+00:00">2026-06-30</time></li>
         
+          <li class="md-meta__item">
+            in
+            
+              <a href="category/automation/" class="md-meta__link">Automation</a>, 
+              <a href="category/linux/" class="md-meta__link">Linux</a>, 
+              <a href="category/english/" class="md-meta__link">English</a></li>
+        
         
           
           <li class="md-meta__item">
             
-              1 min read
+              2 min read
             
           </li>
         
@@ -372,32 +379,33 @@
     </div>
   </header>
   <div class="md-post__content md-typeset">
-    <h2 id="how-to-download-youtube-audio-for-learning"><a class="toclink" href="2026/06/30/how-to-download-youtube-audio-for-learning/">How to download YouTube audio for learning</a></h2>
-<p>In 2026, many standard tools for downloading from YouTube are failing due to frequent API changes. To keep my learning process smooth and get audio for my offline practice, I use <code>yt-dlp</code>. This is a professional-grade command-line tool.</p>
-<h3 id="1-installation"><a class="toclink" href="2026/06/30/how-to-download-youtube-audio-for-learning/#1-installation">1. Installation</a></h3>
-<p>The most reliable way to get the latest version (to avoid HTTP 403 errors) is to download the binary directly from the official GitHub repository:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>cd ~/Downloads
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>wget https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>chmod +x yt-dlp_linux
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>sudo mv yt-dlp_linux /usr/local/bin/yt-dlp
+    <h2 id="overcoming-learning-barriers-why-i-build-my-own-offline-library"><a class="toclink" href="2026/06/30/overcoming-learning-barriers-why-i-build-my-own-offline-library/">Overcoming Learning Barriers: Why I Build My Own Offline Library</a></h2>
+<p>Currently, I am based in Russia, where accessing global educational resources like YouTube has become a significant challenge due to state-imposed restrictions (RKN blocks). For a student, this is more than an inconvenience — it’s a barrier to professional growth.</p>
+<p>Every other day, I spend about 3 hours commuting to the gym and training. I refused to let this time go to waste. To ensure my English learning remains uninterrupted despite unstable connectivity and censorship, I developed a reliable offline workflow using <strong>yt-dlp</strong>.</p>
+<h3 id="my-technical-workflow"><a class="toclink" href="2026/06/30/overcoming-learning-barriers-why-i-build-my-own-offline-library/#my-technical-workflow">My Technical Workflow</a></h3>
+<p>I don’t just "download videos"; I automate the creation of high-quality educational audio files that I can listen to anywhere, regardless of the current state of the local network.</p>
+<h4 id="1-installation"><a class="toclink" href="2026/06/30/overcoming-learning-barriers-why-i-build-my-own-offline-library/#1-installation">1. Installation</a></h4>
+<p>I prefer the direct binary method to ensure I have the most resilient version:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">cd</span><span class="w"> </span>~/Downloads
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>wget<span class="w"> </span>https://github.com/yt-dlp/yt-dlp/releases/latest/download/yt-dlp_linux
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>chmod<span class="w"> </span>+x<span class="w"> </span>yt-dlp_linux
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>sudo<span class="w"> </span>mv<span class="w"> </span>yt-dlp_linux<span class="w"> </span>/usr/local/bin/yt-dlp
 </code></pre></div>
-<h3 id="2-prerequisites"><a class="toclink" href="2026/06/30/how-to-download-youtube-audio-for-learning/#2-prerequisites">2. Prerequisites</a></h3>
-<p>For audio conversion and high-quality processing, you must have FFmpeg installed on your Linux Mint system:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo apt update
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo apt install ffmpeg -y
+<h4 id="2-prerequisites-the-engines-of-resilience"><a class="toclink" href="2026/06/30/overcoming-learning-barriers-why-i-build-my-own-offline-library/#2-prerequisites-the-engines-of-resilience">2. Prerequisites: The Engines of Resilience</a></h4>
+<p>To bypass modern signatures and "JS challenges" used by YouTube to block automated tools, you need a proper runtime:</p>
+<ul>
+<li><strong>Deno</strong>: Essential for executing signature-deciphering scripts. It is the fastest and most reliable way to avoid 403 Forbidden errors in a restricted environment.</li>
+<li><strong>FFmpeg</strong>: For high-quality audio extraction.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ffmpeg<span class="w"> </span>deno<span class="w"> </span>-y
 </code></pre></div>
-<h3 id="3-recommended-command"><a class="toclink" href="2026/06/30/how-to-download-youtube-audio-for-learning/#3-recommended-command">3. Recommended Command</a></h3>
-<p>To download the best available audio and convert it to a high-quality MP3 (320kbps), use the following syntax:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0 &quot;URL&quot;
+<h4 id="3-automation-bash-alias"><a class="toclink" href="2026/06/30/overcoming-learning-barriers-why-i-build-my-own-offline-library/#3-automation-bash-alias">3. Automation (Bash Alias)</a></h4>
+<p>I value efficiency. This alias handles naming and quality automatically:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1"># High-quality MP3 with clean filenames for my commute</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">yta</span><span class="o">=</span><span class="s1">&#39;yt-dlp -x --audio-format mp3 --audio-quality 0 -o &quot;%(title)s.%(ext)s&quot; --no-playlist&#39;</span>
 </code></pre></div>
-<h3 id="4-time-saving-automation-bash-alias"><a class="toclink" href="2026/06/30/how-to-download-youtube-audio-for-learning/#4-time-saving-automation-bash-alias">4. Time-Saving Automation (Bash Alias)</a></h3>
-<p>Instead of typing a long command every time, I created an alias. Add this line to your ~/.bashrc file:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>alias yta=&#39;yt-dlp -f bestaudio --extract-audio --audio-format mp3 --audio-quality 0&#39;
-</code></pre></div>
-<p>After restarting your terminal, you can download any lesson by simply typing:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>yta &quot;https://www.youtube.com/...&quot;
-</code></pre></div>
-<p>This guide is part of my technical journey in Sparrow Lab.</p>
+<p><strong>Ethical Note:</strong> This setup is my personal response to infrastructure instability. It is used strictly for personal education, allowing me to turn 9 hours of weekly commute into a productive language lab.</p>
     
     
   </div>
@@ -453,13 +461,13 @@
         
         
           
-          <a href="archive/2026/" class="md-footer__link md-footer__link--next" aria-label="Next: 2026">
+          <a href="category/automation/" class="md-footer__link md-footer__link--next" aria-label="Next: Automation">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                2026
+                Automation
               </div>
             </div>
             <div class="md-footer__button md-icon">
