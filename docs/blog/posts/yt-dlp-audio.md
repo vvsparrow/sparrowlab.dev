@@ -36,17 +36,27 @@ To bypass modern signatures and "JS challenges" used by YouTube to block automat
 *   **FFmpeg**: For high-quality audio extraction.
 
 ```bash
+# Install FFmpeg and required dependencies
 sudo apt update
-sudo apt install ffmpeg deno -y
+sudo apt install ffmpeg atomicparsley curl unzip -y
+
+# Install Deno runtime
+curl -fsSL https://deno.land/x/install/install.sh | sh
+
+# Update PATH (add these lines to your ~/.bashrc or ~/.zshrc)
+export DENO_INSTALL="$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
 ```
 
 ### 3. Automation (Bash Alias)
 
-I value efficiency. This alias handles naming and quality automatically:
+I value efficiency. This alias extracts the highest available audio quality, embeds the video thumbnail as album art, and ensures clean filenames:
 
 ```bash
 # High-quality MP3 with clean filenames for my commute
-alias yta='yt-dlp -x --audio-format mp3 --audio-quality 0 -o "%(title)s.%(ext)s" --no-playlist'
+alias ytmp3='yt-dlp -f bestaudio -x --audio-format mp3 --audio-quality 0 --embed-thumbnail -o "%(title)s.%(ext)s"'
 ```
+
+**Pro Tip:** For single tracks, use the link from the **'Share'** button. For entire playlists, use the browser URL. When pasting URLs into the terminal, the safest choice is usually **single quotes** (`'URL'`) because they protect characters like `&` and `!` from the shell (especially in Zsh). However, if your string contains an apostrophe (like `don't`), you must use **double quotes** (`"URL"`). If Zsh throws a 'history expansion' error due to a `!` inside double quotes, escape it with a backslash (`\!`) or switch back to single quotes.
 
 **Ethical Note:** This setup is my personal response to infrastructure instability. It is used strictly for personal education, allowing me to turn 9 hours of weekly commute into a productive language lab.
