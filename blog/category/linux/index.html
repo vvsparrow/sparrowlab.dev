@@ -397,14 +397,23 @@
 <li><strong>Deno</strong>: Essential for executing signature-deciphering scripts. It is the fastest and most reliable way to avoid 403 Forbidden errors in a restricted environment.</li>
 <li><strong>FFmpeg</strong>: For high-quality audio extraction.</li>
 </ul>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ffmpeg<span class="w"> </span>deno<span class="w"> </span>-y
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="c1"># Install FFmpeg and required dependencies</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ffmpeg<span class="w"> </span>atomicparsley<span class="w"> </span>curl<span class="w"> </span>unzip<span class="w"> </span>-y
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="c1"># Install Deno runtime</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://deno.land/x/install/install.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>sh
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="c1"># Update PATH (add these lines to your ~/.bashrc or ~/.zshrc)</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="nb">export</span><span class="w"> </span><span class="nv">DENO_INSTALL</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$HOME</span><span class="s2">/.deno&quot;</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$DENO_INSTALL</span><span class="s2">/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
 </code></pre></div>
 <h4 id="3-automation-bash-alias"><a class="toclink" href="../../2026/06/30/overcoming-learning-barriers-why-i-build-my-own-offline-library/#3-automation-bash-alias">3. Automation (Bash Alias)</a></h4>
-<p>I value efficiency. This alias handles naming and quality automatically:</p>
+<p>I value efficiency. This alias extracts the highest available audio quality, embeds the video thumbnail as album art, and ensures clean filenames:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="c1"># High-quality MP3 with clean filenames for my commute</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">yta</span><span class="o">=</span><span class="s1">&#39;yt-dlp -x --audio-format mp3 --audio-quality 0 -o &quot;%(title)s.%(ext)s&quot; --no-playlist&#39;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="nb">alias</span><span class="w"> </span><span class="nv">ytmp3</span><span class="o">=</span><span class="s1">&#39;yt-dlp -f bestaudio -x --audio-format mp3 --audio-quality 0 --embed-thumbnail -o &quot;%(title)s.%(ext)s&quot;&#39;</span>
 </code></pre></div>
+<p><strong>Pro Tip:</strong> For single tracks, use the link from the <strong>'Share'</strong> button. For entire playlists, use the browser URL. When pasting URLs into the terminal, the safest choice is usually <strong>single quotes</strong> (<code>'URL'</code>) because they protect characters like <code>&amp;</code> and <code>!</code> from the shell (especially in Zsh). However, if your string contains an apostrophe (like <code>don't</code>), you must use <strong>double quotes</strong> (<code>"URL"</code>). If Zsh throws a 'history expansion' error due to a <code>!</code> inside double quotes, escape it with a backslash (<code>\!</code>) or switch back to single quotes.</p>
 <p><strong>Ethical Note:</strong> This setup is my personal response to infrastructure instability. It is used strictly for personal education, allowing me to turn 9 hours of weekly commute into a productive language lab.</p>
     
     
