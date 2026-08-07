@@ -19,6 +19,10 @@ refused to let this time go to waste. To ensure my English learning remains
 uninterrupted despite unstable connectivity and censorship, I developed a
 reliable offline workflow using yt-dlp.
 
+![yt-dlp processing a 100-video playlist](../../assets/ytmp3.png)
+*Automating my offline English library: processing an entire YouTube playlist
+via terminal.*
+
 ## My Technical Workflow
 
 I don’t just "download videos"; I automate the creation of high-quality
