@@ -25,6 +25,7 @@ Python journey.*
 
 ![Linux Downloads folder full of cluttered files before automated
 sorting](../../assets/file-sorter.png)
+*Linux Downloads folder full of cluttered files before automated sorting.*
 
 ## My Technical Workflow
 
