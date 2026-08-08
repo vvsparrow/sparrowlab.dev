@@ -5,6 +5,9 @@ categories:
   - Automation
   - Linux
   - English
+tags:
+  - scripts
+  - file-management
 ---
 
 # Overcoming Learning Barriers: Why I Build My Own Offline Library

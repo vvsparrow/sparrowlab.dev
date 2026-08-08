@@ -5,6 +5,10 @@ categories:
   - Automation
   - Python
   - Productivity
+tags:
+  - scripts
+  - file-management
+
 ---
 
 # Cleaning the Chaos: Automating File Organization with Python
