@@ -44,3 +44,4 @@ urllib3==2.7.0
 watchdog==6.0.0
 wcmatch==10.2
 webencodings==0.5.1
+mkdocs-glightbox
