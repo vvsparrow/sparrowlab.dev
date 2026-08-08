@@ -5,7 +5,7 @@ site_author: Valery Vorobyev
 
 theme:
   name: material
-  logo: assets/sparrow.svg
+  logo: assets/sparrow-header.svg
   favicon: assets/sparrow.svg
   palette:
     scheme: slate
