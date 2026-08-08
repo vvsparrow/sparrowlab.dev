@@ -1,10 +1,10 @@
 # Sparrow Lab
 
-Welcome to my technical hub. I'm **Valery Vorobyev**, a Python Developer in the
-making.
+Welcome to my technical hub. I'm Valery Vorobyev,
+a Software Engineer in Test (SDET) / Python Developer in the making.
 
-This site serves as my personal knowledge base and a showcase of my journey from
-zero to a professional Backend Engineer.
+This site serves as my personal knowledge base
+and a showcase of my journey in Python automation, QA, and backend development.
 
 ## 🚀 My Focus
 
