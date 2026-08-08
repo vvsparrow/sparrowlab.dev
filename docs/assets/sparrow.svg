@@ -1,8 +1,19 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg fill="currentColor" height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+<svg height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
 	 viewBox="0 0 338.234 338.234" xml:space="preserve">
+  
+  <style>
+    path {
+      fill: #000000;
+    }
+    @media (prefers-color-scheme: dark) {
+      path {
+        fill: #ffffff;
+      }
+    }
+  </style>
+
 <g>
 	<path d="M289.907,70.398c20.551-11.21,24.203-13.379,24.125-15.549c-0.018-0.487-0.257-1.166-1.296-1.639
 		c-2.043-0.93-4.01-1.481-5.913-2.014c-3.904-1.094-7.276-2.039-10.483-5.884c-1.515-1.816-3.19-5.116-5.13-8.937
