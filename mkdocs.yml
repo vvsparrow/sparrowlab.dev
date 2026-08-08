@@ -27,6 +27,8 @@ plugins:
   - git-revision-date-localized
   - social
   - glightbox
+  - tags:
+      tags_file: tags.md
 
 markdown_extensions:
   - admonition
