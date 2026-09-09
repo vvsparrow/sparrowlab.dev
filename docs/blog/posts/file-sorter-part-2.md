@@ -71,7 +71,7 @@ Testing file operations on real directories can be risky. Adding a
 `dry_run=True` flag allows previewing exactly what the script will do
 without touching a single file:
 
-![Terminal output showing Python file sorter running in dry-run mode with duplicate handling](../../assets/file-sorter-2.png)
+![Terminal output showing Python file sorter running in dry-run mode with duplicate handling](../../assets/file-sorter-2new.png)
 *Demonstration of the script running in dry-run mode to preview safe
 file organization and duplicate resolution.*
 
