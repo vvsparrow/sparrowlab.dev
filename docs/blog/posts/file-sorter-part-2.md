@@ -40,6 +40,8 @@ into dedicated functions:
 * `move_file()`: handles the actual filesystem operation.
 * `sort_directory()`: coordinates the entire workflow.
 
+### 2. Collision Handling: No Overwrites
+
 If you download `report.pdf` multiple times, standard move operations
 might overwrite older files. I added `get_unique_path()` to append an
 incrementing index if a file already exists in the target folder:
