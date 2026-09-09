@@ -128,3 +128,8 @@ My next milestone will be implementing **Pytest** to ensure that the sorting
 logic is robust and that no data is ever lost during the process. This
 "code-test-improve" cycle is exactly the mindset I’m developing for my
 future career in quality assurance.
+
+---
+> **Update:** The script has been refactored for safety and testability!
+> Check out [Part 2: Functions, Dry-Run, and Safe Duplicates](file-sorter-part-2.md)
+> to see how duplicate handling and dry-run mode were implemented.
