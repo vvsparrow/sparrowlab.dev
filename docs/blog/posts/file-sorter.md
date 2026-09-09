@@ -11,7 +11,7 @@ tags:
 
 ---
 
-# Cleaning the Chaos: Automating File Organization with Python
+# File Sorter (Part 1): Automating File Organization with Python
 
 The "Downloads" folder inevitably turns into a "black hole" where documents,
 archives, and media blend into an endless list. To avoid wasting time on
@@ -20,7 +20,7 @@ manual sorting, I developed a simple Python script to handle the heavy lifting.
 This exercise allowed me to practice filesystem operations and bring a bit more
 order to my Linux Mint environment.
 
-!!! tip "Project Sourse"
+!!! tip "Project Source"
 The full implementation is available on GitHub:
 [vvsparrow/file-sorter](https://github.com/vvsparrow/file-sorter)
 
