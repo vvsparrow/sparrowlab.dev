@@ -24,7 +24,6 @@ plugins:
   - awesome-pages
   - blog:
       post_date_format: yyyy-MM-dd
-  - git-revision-date-localized
   - social
   - glightbox
   - tags
