@@ -1,5 +1,8 @@
 ---
-date: 2026-06-30
+date:
+  created: 2026-06-30
+  updated: 2026-09-25
+
 description: How to bypass RKN restrictions and build an offline library for English learning using yt-dlp and Deno.
 categories:
   - Automation
@@ -75,8 +78,24 @@ embeds the video thumbnail as album art, and ensures clean filenames:
 
 ```bash
 # High-quality MP3 with clean filenames for my commute
-alias ytmp3='yt-dlp -f bestaudio -x --audio-format mp3 --audio-quality 0 --embed-thumbnail -o "%(title)s.%(ext)s"'
+alias ytmp3='yt-dlp -f bestaudio -x --audio-format mp3 
+--audio-quality 0 --embed-thumbnail -o "%(title)s.%(ext)s"'
 ```
+
+### 4. Maintenance: Keeping yt-dlp Up to Date
+
+Video platforms constantly alter their internal APIs and player signatures.
+Because of this, `yt-dlp` receives regular upstream patches to maintain compatibility.
+
+Since we placed the binary into `/usr/local/bin` using `sudo`,
+updating it also requires elevated privileges to overwrite the executable:
+
+```bash
+sudo yt-dlp -U
+```
+
+Running this command periodically prevents
+parsing failures and avoids the 90-day obsolescence warning.
 
 **Pro Tip:** For single tracks, use the link from the **'Share'** button. For
 entire playlists, use the browser URL. When pasting URLs into the terminal, the
