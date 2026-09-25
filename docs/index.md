@@ -20,7 +20,8 @@ I'm currently mastering Python backend development with a strong emphasis on:
 for efficient learning.
 - **Python Roadmap** — (Coming soon) My progress through core concepts and OOP.
 - **Automation Scripts** — Tools I build to optimize my workflow.
-  - [Cleaning the Chaos: Automating File Organization with Python](blog/posts/file-sorter.md)
+  - [File Sorter (Part 1): Automating File Organization with Python](blog/posts/file-sorter.md)
+  - [File Sorter (Part 2): Functions, Dry-Run, and Safe Duplicates](blog/posts/file-sorter-part-2.md)
 
 ## 📜 My Principles
 
